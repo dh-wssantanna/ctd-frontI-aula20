@@ -1,24 +1,101 @@
 <!DOCTYPE html>
-<!-- font-size: 24px; -->
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aula 20 - Design Adaptativo (Media Query)</title>
+    <title>mesa-aula20-sala2</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
-    <div class="conteudo"> <!-- 14px -->
-        <!-- 1rem = 24px (html) -->
-        <nav>Navegação</nav>
-        <main> <!-- 1em = 14px (pai conteudo) -->
-            <p>Conteúdo</p>
-        </main>
-        <aside>Relacionados</aside>
-        <footer>Rodapé</footer>
+    <div class="conteudo">
+        <header>
+            <div class="logo-texto">
+                <h1 class="textologo1">DigitalTube</h1>
+            </div>
+        </header>
+        <div class=" video-principal">
+            <video controls="controls" autoplay="autoplay">
+                <source src="https://www.youtube.com/watch?v=iSqf2iPqJNM" type="video/mp4">
+                <object data="">
+                    <embed src="https://www.youtube.com/watch?v=iSqf2iPqJNM">
+                </object>
+            </video>
+            <h2>Vídeo Principal</h2>
+            <p>Descrição do Vídeo</p>
+        </div>
+
+        <div class="lateral">
+
+            <div class="videolateral">
+                <div class="video">
+                    <video controls="controls" autoplay="autoplay">
+                        <source src="https://www.youtube.com/watch?v=iSqf2iPqJNM" type="video/mp4">
+                        <object data="">
+                            <embed src="https://www.youtube.com/watch?v=iSqf2iPqJNM">
+                        </object>
+                    </video>
+                </div>
+                <div class="video-infos">
+                    <h3>Video 1</h3>
+                    <p>Canal 1</p>
+                    <p>Há 2 dias</p>
+                    <p>128 mil visualizações</p>
+                </div>
+            </div>
+
+            <div class="videolateral">
+                <div class="video">
+                    <video controls="controls" autoplay="autoplay">
+                        <source src="https://www.youtube.com/watch?v=iSqf2iPqJNM" type="video/mp4">
+                        <object data="">
+                            <embed src="https://www.youtube.com/watch?v=iSqf2iPqJNM">
+                        </object>
+                    </video>
+                </div>
+                <div class="video-infos">
+                    <h3>Video 2</h3>
+                    <p>Canal 1</p>
+                    <p>Há 2 dias</p>
+                    <p>128 mil visualizações</p>
+                </div>
+            </div>
+            <div class="videolateral">
+                <div class="video">
+                    <video controls="controls" autoplay="autoplay">
+                        <source src="https://www.youtube.com/watch?v=iSqf2iPqJNM" type="video/mp4">
+                        <object data="há 2 dias">
+                            <embed src="https://www.youtube.com/watch?v=iSqf2iPqJNM">
+                        </object>
+                    </video>
+                </div>
+                <div class="video-infos">
+                    <h3>Video 3</h3>
+                    <p>Canal 1</p>
+                    <p>Há 2 dias</p>
+                    <p>128 mil visualizações</p>
+                </div>
+            </div>
+            <div class="videolateral">
+                <div class="video">
+                    <video controls="controls" autoplay="autoplay">
+                        <source src="https://www.youtube.com/watch?v=iSqf2iPqJNM" type="video/mp4">
+                        <object data="">
+                            <embed src="https://www.youtube.com/watch?v=iSqf2iPqJNM">
+                        </object>
+                    </video>
+                </div>
+                <div class="video-infos">
+                    <h3>Video 4</h3>
+                    <p>Canal 1</p>
+                    <p>Há 2 dias</p>
+                    <p>128 mil visualizações</p>
+                </div>
+            </div>
+        </div>
     </div>
-    
+
+
 </body>
-</html>

@@ -1,180 +1,72 @@
-/*
-    Mobile first (Celulares Primeiro)
-    É um conceito que prioriza as regras que serão utilizadas no celular,
-    e posteriormente em telas maiores.
-
-    ---- 
-
-    Obs.: Muito se fala sobre padronização de tamanhos de tela, 
-    porém por se tratar de valores imprecisos, é aconselhável
-    acompanhar os valores que melhor se adequam a relalidade do projeto. 
-    É possível extrair tais informações em relatórios da equipe de marketing.
-*/
-
-html {
-  font-size: 24px;
-}
-
 body {
-  margin: 0;
-  box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-nav,
-main,
-aside,
-footer {
-  align-items: center;
-  background-color:darkorange ;
-  border-radius: 10px;
-  display: flex;
-  font-weight: 900;
-  justify-content: center;
-  padding: 25px;
-}
-
-nav {
-  grid-area: navegacao;
-}
-
-main {
-  grid-area: conteudo;
-}
-
-aside {
-  grid-area: relacionados;
-}
-
-footer {
-  grid-area: rodape;
+    padding: 0;
 }
 
 .conteudo {
-  border: 5px solid gray;
-  padding: 25px;
-  margin: 25px auto;
-  max-width: 960px;
-  min-height: 600px;
-  /* 
-        Grid layout
-        - display: grid
-        - grid-template-columns
-        - grid-template-rows
-        - minmax()
-        - repeat()
-        - grid-area
-    */
     display: grid;
     gap: 25px;
-    grid-template-columns: 1fr;
-    grid-template-rows: 100px 1fr 100px 50px;
+    grid-template-columns: 2fr 1fr;
     grid-template-areas:
-      "navegacao"
-      "conteudo"
-      "relacionados"
-      "rodape";
+        "header header"
+        "video-principal lateral";
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-/*
-    Sendo assim, as regras CSS relacionadas a versão
-    para telas maiores é aplicada nas regras das medias query.
+header {
+    height: 30px;
+    background-color: rgb(156, 80, 156);
+    width: 100%;
+    grid-area: header;
+    padding: 10px;
+}
 
-    - min-width
-    - max-width
-    - orientation
+.video-principal {
+    grid-area: video-principal;
+    margin-left: 25px;
+}
 
-    ----
-
-    Obs.: É possível utilizar valores relativos. Segue algumas tabelas
-
-    - % Porcentagem 
-      elementro_filho * 100 / elemento_pai = porcentagem
-      300 * 100 / 1200 = 25%
-
-    - em / rem
-      Normalmente utilizadas em fontes, pois tornam  o processo
-      de maniputação do tamanho relativo, facilitando a adaptação de layout.
-      1em = 16px
-      16px * 1.5em = 24px;
-
-      Obs.: A Unidade de medida de em leva em consideração o tamanho do pai, 
-      e a unidade de medida rem utiliza apenas o tamanho definido na tag <html>.
-
-      1rem = 16px
-      16px * 1.5rem = 24px;
-
-    - vw / vh
-      Ambas medidas levam
-*/
-
-@media (min-width: 768px) {
-
-  html {
-    font-size: 18px;
-  }
-
-  nav,
-  main,
-  aside,
-  footer {
-    background-color:orange;
-  }
-
-  nav {
-    font-size: 1rem;
-  }
-
-  main {
-    font-size: 1em;
-  }
-
-  .conteudo {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 100px 1fr 50px;
-    grid-template-areas:
-      "navegacao navegacao"
-      "relacionados conteudo"
-      "rodape rodape";
-    /*
-      - em / rem
-      Normalmente utilizadas em fontes, pois tornam  o processo
-      de maniputação do tamanho relativo, facilitando a adaptação de layout.
-      1em = 16px
-      16px * 1.5em = 24px;
-
-      Obs.: A Unidade de medida de em leva em consideração o tamanho do pai, 
-      e a unidade de medida rem utiliza apenas o tamanho definido na tag <html>.
-
-      1rem = 16px
-      16px * 1.5rem = 24px;
-    */
-
-    font-size: 14px;
-  }
-  
+.video-principal video {
+    width: 1000px;
 
 }
 
-@media (min-width: 960px) {
+.lateral {
+    grid-area: lateral;
+}
 
-  html {
-    font-size: 16px;
-  }
-  
-  nav,
-  main,
-  aside,
-  footer {
-    background-color:darkorchid;
-  }
+.logo-imagem {
+    width: 45px;
+    height: 45px;
+    background-color: white;
+    border-radius: 25px;
+}
 
-  .conteudo {
-    grid-template-columns: 150px repeat(3, 1fr);
+.logo-texto {
+    margin-left: 20px;
+    color: white;
+    margin-top: -15px;
+    font-family: monospace;
+}
+
+.videos {
+    grid-area: video;
+    align-content: center;
+}
+
+.video-infos {
+    grid-area: infos;
+    align-content: center;
+    margin-top: -15px;
+   
+
+}
+
+.videolateral {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     grid-template-areas:
-      "navegacao      navegacao   navegacao   navegacao"
-      "relacionados   conteudo    conteudo    conteudo"
-      "rodape         rodape      rodape      rodape";
-  }
+        "video  infos";
+    gap: 25px;
+    grid-template-rows:30px 30px 30px 30px ;
 
 }
