@@ -1,6 +1,5 @@
 body {
     padding: 0;
-
 }
 
 .conteudo {
@@ -10,6 +9,7 @@ body {
     grid-template-areas:
         "header header"
         "video-principal lateral";
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 header {
@@ -22,12 +22,12 @@ header {
 
 .video-principal {
     grid-area: video-principal;
-    margin-left: auto;
+    margin-left: 25px;
 }
 
 .video-principal video {
     width: 1000px;
-    margin-left: 25px;
+
 }
 
 .lateral {
@@ -48,18 +48,25 @@ header {
     font-family: monospace;
 }
 
-.videolateral {
-    grid-area: videolateral;
+.videos {
+    grid-area: video;
+    align-content: center;
 }
 
 .video-infos {
-    grid-area: video-infos;
+    grid-area: infos;
+    align-content: center;
+    margin-top: -15px;
+   
+
 }
 
-.lateral {
+.videolateral {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-areas:"videolateral video-infos";
-
+    grid-template-areas:
+        "video  infos";
+    gap: 25px;
+    grid-template-rows:30px 30px 30px 30px ;
 
 }
