@@ -1,0 +1,65 @@
+body {
+    padding: 0;
+
+}
+
+.conteudo {
+    display: grid;
+    gap: 25px;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas:
+        "header header"
+        "video-principal lateral";
+}
+
+header {
+    height: 30px;
+    background-color: rgb(156, 80, 156);
+    width: 100%;
+    grid-area: header;
+    padding: 10px;
+}
+
+.video-principal {
+    grid-area: video-principal;
+    margin-left: auto;
+}
+
+.video-principal video {
+    width: 1000px;
+    margin-left: 25px;
+}
+
+.lateral {
+    grid-area: lateral;
+}
+
+.logo-imagem {
+    width: 45px;
+    height: 45px;
+    background-color: white;
+    border-radius: 25px;
+}
+
+.logo-texto {
+    margin-left: 20px;
+    color: white;
+    margin-top: -15px;
+    font-family: monospace;
+}
+
+.videolateral {
+    grid-area: videolateral;
+}
+
+.video-infos {
+    grid-area: video-infos;
+}
+
+.lateral {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:"videolateral video-infos";
+
+
+}
